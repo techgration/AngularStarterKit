@@ -16,6 +16,8 @@ import { ShellModule } from './shell/shell.module';
 import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { UserAdministrationModule } from './useradministration/useradministration.module';
+import { StandardAttributeValueRecommendationModule } from './StandardAttributeValueRecommendation/StandardAttributeValueRecommendation.module';
 
 @NgModule({
   imports: [
@@ -30,6 +32,8 @@ import { AppRoutingModule } from './app-routing.module';
     ShellModule,
     HomeModule,
     LoginModule,
+    UserAdministrationModule,
+    StandardAttributeValueRecommendationModule,
     Angulartics2Module.forRoot(),
     AppRoutingModule // must be imported as the last module as it contains the fallback route
   ],
