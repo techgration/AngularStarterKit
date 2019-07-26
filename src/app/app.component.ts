@@ -26,7 +26,10 @@ export class AppComponent implements OnInit, OnDestroy {
     // this injection initializes page tracking through the router
     private angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics,
     private i18nService: I18nService
-  ) {}
+  ) 
+  {
+
+  }
 
   ngOnInit() {
     // Setup logger
@@ -64,9 +67,25 @@ export class AppComponent implements OnInit, OnDestroy {
           this.titleService.setTitle(this.translateService.instant(title));
         }
       });
+      fetch('https://api.myjson.com/bins/15psn9')
+      .then(result => result.json())
+      .then(rowData => this.rowData = rowData);
   }
 
   ngOnDestroy() {
     this.i18nService.destroy();
   }
+
+  columnDefs = [
+    {headerName: 'Make', field: 'make'},
+    {headerName: 'Model', field: 'model'},
+    {headerName: 'Price', field: 'price', editable: true}
+  ];
+
+  rowData: any = [];
+
+
 }
+
+
+

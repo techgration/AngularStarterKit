@@ -32,7 +32,7 @@
             "styles": [
               "src/main.scss",    
               "node_modules/datatables.net-dt/css/jquery.dataTables.css",
-              "../node_modules/bootstrap/dist/js/bootstrap.js"
+              "node_modules/bootstrap/dist/js/bootstrap.js"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",

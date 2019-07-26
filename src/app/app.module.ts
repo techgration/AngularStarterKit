@@ -17,7 +17,7 @@ import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { UserAdministrationModule } from './useradministration/useradministration.module';
-import { StandardAttributeValueRecommendationModule } from './StandardAttributeValueRecommendation/StandardAttributeValueRecommendation.module';
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   imports: [
@@ -33,7 +33,7 @@ import { StandardAttributeValueRecommendationModule } from './StandardAttributeV
     HomeModule,
     LoginModule,
     UserAdministrationModule,
-    StandardAttributeValueRecommendationModule,
+    AgGridModule.withComponents(null),
     Angulartics2Module.forRoot(),
     AppRoutingModule // must be imported as the last module as it contains the fallback route
   ],
